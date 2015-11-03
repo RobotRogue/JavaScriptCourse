@@ -159,4 +159,108 @@ if (quarter(60) % 3 === 0 ) {
 }
 
 
-// That was some work...
+// Functions can support multiple values, here's an example:
+
+// Write a function called perimeterBox that returns the perimeter of a rectangle.
+// It should have two parameters.
+// One formula for perimeter is length + length + width + width;
+// Call the function and pass in any value for length and width you like.
+
+var perimeterBox = function(lng, wid) {
+    return(lng + lng + wid + wid);
+};
+
+perimeterBox(2,4)
+
+
+// GLOBAL vs. LOCAL VARIABLES
+
+// Let's talk about an important concept: scope. Scope can be global or local.
+// Variables defined outside a function are accessible anywhere once they have been declared. They are called global variables and their scope is global.
+// For example:
+var globalVar = "hello";
+
+var foo = function() {
+    console.log(globalVar);  // prints "hello"
+}
+
+// The variable globalVar can be accessed anywhere, even inside the function foo.
+
+// Variables defined inside a function are local variables. They cannot be accessed outside of that function.
+// For example:
+var bar = function() {
+    var localVar = "howdy";
+}
+
+console.log(localVar);  // error
+
+// The variable localVar only exists inside the function bar. Trying to print localVar outside the function gives a error.
+
+// Now check out this code here:
+var my_number = 7; //this has global scope
+
+var timesTwo = function(number) {
+    my_number = number * 2;
+    console.log("Inside the function my_number is: ");
+    console.log(my_number);
+};
+
+timesTwo(7);
+
+console.log("Outside the function my_number is: ")
+console.log(my_number);
+
+// The var keyword creates a new variable in the current scope.
+// That means if var is used outside a function, that variable has a global scope.
+// If var is used inside a function, that variable has a local scope.
+// For my_number we have not used the var keyword, so when we log my_number to the console outside of the function, it will be 14.
+
+// Using my_number without the var keyword refers to the global variable that has already been declared outside the function in line 1.
+// However, if you use the var keyword inside a function, it declares a new local variable that only exists within that function.
+
+
+// A quick recap on functions and returning a result:
+
+// Write a function called nameString()
+// It should take name as a parameter.
+// The function returns a string equal to "Hi, I am" + " " + name.
+// Call nameString() by passing it your name, and use console.log to print the output.
+var nameString = function(name) {
+	return("Hi, I am " + name);
+};
+
+console.log(nameString("Nelson"));
+
+
+// Functions & if / else
+// An especially useful application of reusable code is if/else statements. These can be very wordy, and a pain to type repeatedly.
+
+// We are going to write a function that checks how many hours of sleep a night you're getting.
+// Inside the function will be an if/else statement.
+// We want the function to check many different numbers of hours to see whether a person is getting enough sleep.
+
+// Write a function named sleepCheck that takes the parameter numHours
+// Inside the function, write an if statement where if the number of hours of sleep is greater than or equal to 8,
+// the computer will return "You're getting plenty of sleep! Maybe even too much!";.
+// Otherwise (else) if the number of hours of sleep is less than 8, have the computer return "Get some more shut eye!";
+// Then call the function with different hours of sleep
+
+// TESTS
+// Call the function with 10 hours of sleep, like this: sleepCheck(10);
+// Call the function with 5 hours of sleep.
+// Call the function with 8 hours of sleep
+
+// Write your function below.
+// Don't forget to call your function!
+
+var sleepCheck = function(numHours) {
+    if (numHours >= 8)
+    return "You're getting plenty of sleep! Maybe even too much!";
+    else
+    return "Get some more shut eye!";
+};
+
+console.log(sleepCheck(10));
+
+
+// OKAY! Next lesson - THE GAME
