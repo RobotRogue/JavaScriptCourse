@@ -69,6 +69,124 @@ understand = true;
 while(understand){
 	console.log("I'm learning while loops!");
 	//Change the value of 'understand' here!
+  understand = false;
 }
 
-// 
+// Brevity is the soul of programming
+/* You may have noticed that when we give a variable the boolean value true, we check that variable directly—we don't bother with ===.
+For instance, */
+
+var bool = true;
+while(bool){
+    //Do something
+}
+
+// is the same as...
+
+var bool = true;
+while(bool === true){
+    //Do something
+}
+
+/* but the first one is faster to type. Get in the habit of typing exactly as much as you need to, and no more!
+
+If you happen to be using numbers, as we did earlier, you could even do: */
+
+var myNumber = 1;
+while(myNumber) {
+    // Do something!
+}
+
+// So how would you clean up this code:
+/*
+var bool = true;
+
+while(bool === true){
+    console.log("Less is more!");
+    bool = false;
+}
+*/
+
+var bool = true;
+
+while(bool){
+    console.log("Less is more!");
+    bool = false;
+}
+
+
+// Practice makes perfect (or at least Better)
+/* Okay. Time for you to create a while loop from scratch!
+
+We've set up a function, loop, for you to write your while loop in, as well as created the empty loop.
+
+Remember to set up the condition you're checking outside the loop—if you do it in the loop, it will keep resetting and the loop could go on forever! */
+
+//Remember to set your condition outside the loop!
+
+
+var loop = function(yourNumber){
+	while(yourNumber < 3){
+		console.log("I'm looping!");
+		yourNumber = yourNumber + 1
+	}
+};
+
+loop(0);
+
+
+// Solo flight
+// Great work! Let's try another. This time, no help at all! (Well, some help—check the Hint if you get stuck.)
+
+//Remember to make your condition true outside the loop!
+
+//Remember to make your condition true outside the loop!
+
+var soloLoop = function(theLoop){
+  while (theLoop < 1) {
+      console.log("Looped once!");
+      theLoop = theLoop + 1
+  }
+};
+
+soloLoop(0);
+
+
+// When to 'while' and when to 'for'
+/* As we mentioned, for loops are great for doing the same task over and over when you know ahead of time how many times you'll have to repeat the loop.
+On the other hand, while loops are ideal when you have to loop, but you don't know ahead of time how many times you'll need to loop.
+
+As you saw, however, you can combine a while loop with a counter variable to do the same kind of work a for loop does. In these cases, it's often a matter of preference. */
+
+// The 'do' / 'while' loop
+/* Sometimes you want to make sure your loop runs at least one time no matter what.
+When this is the case, you want a modified while loop called a do/while loop.
+
+This loop says: "Hey! Do this thing one time, then check the condition to see if we should keep looping."
+After that, it's just like a normal while: the loop will continue so long as the condition being evaluated is true. */
+
+var loopCondition = false;
+
+do {
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");
+} while (loopCondition);
+
+// To learn it, you gotta 'do' it
+/* Your turn! Now that you've seen how do/while loops work, you can easily write your own. (Check the Hint if you need a syntax refresher!)
+
+Your loop should print a string of your choice to the editor one time. Remember: make sure you give your while condition a way to become false, or it'll loop forever!
+
+Write a do/while loop inside the function we've created for you, getToDaChoppa. The function should log a string of your choice to the console. do it now!*/
+
+var getToDaChoppa = function(){
+  var loopCondition = false;
+  do {
+      console.log("Ruuun! Goooo! Get to da choppaaaaaaaaaah!");
+  } while (loopCondition)
+
+};
+
+getToDaChoppa();
+
+
+// Next up: dragonSlayer!
