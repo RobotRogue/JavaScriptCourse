@@ -58,7 +58,11 @@ var isEven = function(number) {
 var isEven = function(number) {
   if (number % 2 === 0) {
       return true;
+  } else if (isNaN(number)) {
+      return ("Nope. Not a number, bro.");
   } else {
       return false;
   }
 };
+
+isEven(2);
