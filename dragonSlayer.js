@@ -11,27 +11,23 @@ and if you miss even one hit, the dragon will defeat you! */
 Run it a few times to see how you fare against the dragon! */
 
 var slaying = true;
-// A bit of new math magic to calculate the odds
-// of hitting the dragon. We'll cover this soon!
-var youHit = Math.floor(Math.random() * 2);
-var damageThisRound = Math.floor(Math.random() * 5 + 1);
+var youHit = Math.floor(Math.random() *2);
+var damageThisRound = Math.floor(Math.random()*5 + 1);
 var totalDamage = 0;
 
 while (slaying) {
-  if (youHit) {
-    console.log("You hit the dragon and did " + damageThisRound + " damage!");
-    totalDamage += damageThisRound;
+    if (youHit === 1) {
+        console.log("Huzzah! You hit the Dragon for " + damageThisRound + " damage!");
+        totalDamage += damageThisRound;
 
-    if (totalDamage >= 4) {
-      console.log("You did it! You slew the dragon!");
-      slaying = false;
-    } else {
-      youHit = Math.floor(Math.random() * 2);
+            if (totalDamage >= 4) {
+                console.log("Great warrior, you have slain The Dragon!");
+            slaying = false;
+            } else {
+                youHit = Math.floor(Math.random() *2);
+            }
+        } else {
+            console.log("Egads! The Dragon has defeated you!");
+            slaying = false;
+        }
     }
-  } else {
-    console.log("The dragon burninates you! You're toast.");
-    slaying = false;
-  }
-}
-
-// ...
