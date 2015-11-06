@@ -190,7 +190,8 @@ switch(answer) {
 
 
 // Overview
-/* So far we've seen how to control our programs given a single condition: whether one variable is equal to a certain value, for instance. But what if we want to check more than one variable?
+/* So far we've seen how to control our programs given a single condition: whether one variable is equal to a certain value, for instance.
+But what if we want to check more than one variable?
 
 For this, we'll need logical operators. JavaScript has three: and (&&), or (||), and not (!).
 
