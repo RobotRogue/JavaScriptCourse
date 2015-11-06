@@ -113,7 +113,7 @@ switch (user) {
             } else {
                 console.log ("Do you think you have kept up with your cardio - " + item5);
                 console.log ("Do you think you are wearing good shoes - " + item6);
-                console.log("Should have planned ahead! You're dead meat!");
+                console.log ("Should have planned ahead! You're dead meat!");
             }
             break;
 
