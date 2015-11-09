@@ -128,7 +128,7 @@ Remember to set up the condition you're checking outside the loop—if you do it
 var loop = function(yourNumber){
 	while(yourNumber < 3){
 		console.log("I'm looping!");
-		yourNumber = yourNumber + 1
+		yourNumber = yourNumber + 1;
 	}
 };
 
@@ -145,7 +145,7 @@ loop(0);
 var soloLoop = function(theLoop){
   while (theLoop < 1) {
       console.log("Looped once!");
-      theLoop = theLoop + 1
+      theLoop = theLoop + 1;
   }
 };
 
@@ -182,7 +182,7 @@ var getToDaChoppa = function(){
   var loopCondition = false;
   do {
       console.log("Ruuun! Goooo! Get to da choppaaaaaaaaaah!");
-  } while (loopCondition)
+  } while (loopCondition);
 
 };
 
