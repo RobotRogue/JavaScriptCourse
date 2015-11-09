@@ -21,7 +21,7 @@ var computerChoice = Math.random();
 
 // Might as well see what the computer choice ends up being, so print to the console to see
 
-console.log(computerChoice)
+console.log(computerChoice);
 
 // Now we have to make the Math.random map to a value of Rock, Paper, or Scissors
 // We can use IF, ELSE IF, and ELSE statements to make this work
@@ -99,9 +99,9 @@ var compare = function(choice1, choice2) {
   }
   else if (choice1 === "rock") {
     if (choice2 === "scissors")
-    return "rock wins"
+    return "rock wins";
     else
-    return "paper wins"
+    return "paper wins";
   }
 };
 
@@ -129,15 +129,15 @@ var compare = function(choice1, choice2) {
   }
   else if (choice1 === "rock") {
     if (choice2 === "scissors")
-    return "rock wins"
+    return "rock wins";
     else
-    return "paper wins"
+    return "paper wins";
   }
   else if (choice1 === "paper") {
     if (choice2 === "rock")
-    return "paper wins"
+    return "paper wins";
     else
-    return "scissors wins"
+    return "scissors wins";
   }
 };
 
@@ -170,21 +170,21 @@ var compare = function(choice1, choice2) {
   }
   else if (choice1 === "rock") {
     if (choice2 === "scissors")
-    return "rock wins"
+    return "rock wins";
     else
-    return "paper wins"
+    return "paper wins";
   }
   else if (choice1 === "paper") {
     if (choice2 === "rock")
-    return "paper wins"
+    return "paper wins";
     else
-    return "scissors wins"
+    return "scissors wins";
   }
   else if (choice1 === "scissors") {
     if (choice2 === "rock")
-    return "rock wins"
+    return "rock wins";
     else
-    return "scissors wins"
+    return "scissors wins";
   }
 };
 
