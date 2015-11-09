@@ -17,7 +17,7 @@ for (var counter = 1; counter < 6; counter++) {
 // Below is the general syntax of the for loop.
 
 for (var i = 1; i < 11; i = i + 1) {
-    /* your code here */;
+    /* your code here */
 }
 
 // Every for loop makes use of a counting variable. Here, our variable is called i (but it can have any name).
@@ -39,7 +39,7 @@ for (var i = 5; i < 11; i = i + 1){
 // We know how to control where the for loop starts. How do we control where it ends? Well, the second part of the for loop determines that.
 
 for (var i = 1; i < 11; i = i + 1) {
-        code code code;
+        //code code code;
     }
 // Above - Here, this for loop will keep running until i = 10 ( i.e. while i < 11).
 // So when i = 2, or i = 9, the for loop will run. But once i is no longer less than 11, the loop will stop.
@@ -245,7 +245,7 @@ Click "Stuck? Get a hint!" for an example of how to write a for loop.
 var names = ["Sara","Nelson","Liam","Agnes","Squeaky"];
 for (var i = 0; i < names.length; i++) {
     console.log("I know someone called " + names[i]);
-};
+}
 
 
 // Conclusion
