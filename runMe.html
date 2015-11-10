@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>ADVENTURE!</title>
+  </head>
+
+  <body>
+
+  <pre>
+    <script>
+    document.writeln ("Get ready for Adventure!");
+    var user = prompt ("You're trying to escape from some zombies, do you Fight them? Do you Hide? Or do you Run?", "Fight? Hide? Run?").toUpperCase();
+
+    switch (user) {
+        case 'FIGHT':
+            var item1 = prompt ("Do you have a weapon?").toUpperCase();
+            var item2 = prompt ("Think you can destroy the brain?").toUpperCase();
+            if (item1 === "YES" && item2 === "YES") {
+                    document.writeln ("Do you have a weapon - " + item1);
+                    document.writeln ("Do you think you can destroy the brain - " + item2);
+                    document.writeln ("You used your weapon and really messed that sucker up!");
+                } else {
+                    document.writeln ("Do you have a weapon - " + item1);
+                    document.writeln ("Do you think you can destroy the brain - " + item2);
+                    document.writeln ("You tried to fight, but you lost - now you're a Zombie snack!");
+                }
+                break;
+
+        case 'HIDE':
+            var item3 = prompt ("Is there somewhere safe to hide?").toUpperCase();
+            var item4 = prompt ("Can you get indoors and block the door?").toUpperCase();
+            if (item3 === "YES" || item4 === "YES") {
+                    document.writeln ("Do you think there is somewhere safe to hide - " + item3);
+                    document.writeln ("Do you think you can get indoors and block the door - " + item4);
+                    document.writeln ("You dive for cover, and the zombie loses track of you and ambles away! ");
+                } else {
+                    document.writeln ("Do you think there is somewhere safe to hide - " + item3);
+                    document.writeln ("Do you think you can get indoors and block the door - " + item4);
+                    document.writeln ("Not very good at this 'survival' thing, are ya?");
+                }
+                break;
+
+        case 'RUN':
+            var item5 = prompt ("Have you kept up on your cardio?").toUpperCase();
+            var item6 = prompt ("Are you wearing good shoes?").toUpperCase();
+            if (item5 === "YES" && item6 === "YES") {
+                    document.writeln ("Do you think you have kept up with your cardio - " + item5);
+                    document.writeln ("Do you think you are wearing good shoes - " + item6);
+                    document.writeln ("You make a break for it, and outrun that zombie with ease!");
+                } else if (item5 === "NO" && item6 === "YES") {
+                    document.writeln ("Do you think you have kept up with your cardio - " + item5);
+                    document.writeln ("Do you think you are wearing good shoes - " + item6);
+                    document.writeln ("You're lucky you've got good shoes on, you barely outrun Mr. Zombie!");
+                } else if (item5 === "YES" && item6 === "NO"){
+                    document.writeln ("Do you think you have kept up with your cardio - " + item5);
+                    document.writeln ("Do you think you are wearing good shoes - " + item6);
+                    document.writeln ("You barely got away, but your feet won't last forever.");
+                } else {
+                    document.writeln ("Do you think you have kept up with your cardio - " + item5);
+                    document.writeln ("Do you think you are wearing good shoes - " + item6);
+                    document.writeln ("Should have planned ahead! You're dead meat!");
+                }
+                break;
+
+        default:
+            document.writeln ("You didn't choose correctly, now you're zombie dinner!");
+        }
+    </script>
+  </pre>
+
+  </body>
+</html>
