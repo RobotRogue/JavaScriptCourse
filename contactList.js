@@ -5,7 +5,7 @@ Then, using functions, we'll be able to log the entries in our contact list to t
 */
 
 // Below is the sample code provided in the lesson:
-
+/*
 var friends = {};
 friends.bill = {
   firstName: "Bill",
@@ -37,6 +37,36 @@ var search = function(name) {
 
 list(friends);
 search("Steve");
+*/
 
+// My Version of the Project:
 
-// 
+var friends = {};
+friends.bill = {
+  firstName: "Bill",
+  lastName: "Gates",
+  number: "(778) 243-9902",
+  address: ['One Microsoft Way', 'Redmond', 'WA', '98052']
+};
+
+friends.steve = {
+  firstName: "Steve",
+  lastName: "Jobs",
+  number: "(778) 734-8240",
+  address: ['1 Infinite Loop', 'Cupertino', 'CA', '95014']
+};
+
+var list = function(friends) {
+  for (var friendsName in friends) {
+    console.log(friendsName);
+  }
+};
+
+var search = function(name) {
+  for (var searchName in friends) {
+    if (friends[searchName].firstName === name) {
+      console.log(searchName);
+      return (friends[searchName]);
+    }
+  }
+};
