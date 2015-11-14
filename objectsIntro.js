@@ -337,3 +337,108 @@ var george = new Person("George Washington", 275);
 
 
 // Try it Out!
+
+
+// Function Review
+/* In this lesson we are going to focus on methods. Methods are an important part of object oriented programming (OOP). OOP is an important part of programming which we'll dive into later.
+
+Methods are similar to functions. To prepare for methods, let's do a quick refresher on functions.
+Functions are defined using the function keyword followed by:
+
+A pair of parentheses ( ) with optional parameters inside.
+A pair of curly braces with the function's code inside { }.
+A semicolon ;.
+And when we call the function, we can put inputs (arguments) for the parameters.
+
+For example, the square function on line 2 takes x as its parameter and returns that parameter squared. */
+
+// Instructions
+/* Define the function multiply. It should take two parameters, x and y, and return the product.
+
+Then call your function, passing in any two arguments. */
+
+// Accepts a number x as input and returns its square
+var square = function (x) {
+  return x * x;
+};
+
+// Write the function multiply below
+// It should take two parameters and return the product
+
+
+var multiply = function (x, y) {
+    result = x * y;
+    return result;
+    };
+
+multiply(7,3);
+
+
+// So What's a Method?
+/* In the last section, we discussed properties. We can think of properties as variables associated with an object. Similarly, a method is just like a function associated with an object.
+
+Let's look at bob, our same person object from the last lesson. Instead of just having the properties name and age (line 3 & 4), bob also has a method called setAge (line 6).
+As you can probably guess, this method sets bob's age to whatever argument you give it.
+
+Notice how we define setAge kind of like we define a property. The big difference is that we put in a function after the equals sign instead of a string or number.
+
+We call a method like a function, but we use ObjectName.methodName(). Look at line 10 where we use the method to change bob's age to 40. We did this by calling bob.setAge(40);. */
+
+// Instructions
+// Try it yourself! Use the method setAge to set bob's age to 20.
+
+// here is bob again, with his usual properties
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+
+// this time we have added a method, setAge
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+
+// here we set bob's age to 40
+bob.setAge(40);
+
+// bob's feeling old.  Use our method to set bob's age to 20
+bob.setAge(20);
+
+
+// Why Are Methods Important?
+/* Methods serve several important purposes when it comes to objects.
+
+They can be used to change object property values. The method setAge on line 4 allows us to update bob.age.
+They can be used to make calculations based on object properties.
+Functions can only use parameters as an input, but methods can make calculations with object properties.
+For example, we can calculate the year bob was born based on his age with our getYearOfBirth method (line 8). */
+
+// Instructions
+// Click Save & Submit Code to find out what year bob was born in and move onto the next exercise, where we will learn more about how to make methods.
+
+var bob = new Object();
+bob.age = 17;
+
+// this time we have added a method, setAge
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+
+bob.getYearOfBirth = function () {
+  return 2014 - bob.age;
+};
+console.log(bob.getYearOfBirth());
+
+
+// The "this" Keyword
+/* Our setAge method works great for bob because it updates bob.age, but what if we want to use it for other people?
+
+It turns out we can make a method work for many objects using a new keyword, this.
+The keyword this acts as a placeholder, and will refer to whichever object called that method when the method is actually used.
+
+Let's look at the method setAge (line 2) to see how this works. By using the keyword this, setAge will change the age property of any object that calls it.
+Previously, we had a specific object bob instead of the keyword this. But that limited the use of the method to just bob.
+
+Then when we say bob.setAge = setAge; (line 9), it means whenever we type bob.setAge( ), this.age in the setAge method will refer to bob.age. */
+
+// Instructions
+//To show this way of making setAge works just like the one in exercise 2, use bob's setAge method to change his age to 50.
