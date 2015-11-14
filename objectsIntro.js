@@ -442,3 +442,125 @@ Then when we say bob.setAge = setAge; (line 9), it means whenever we type bob.se
 
 // Instructions
 //To show this way of making setAge works just like the one in exercise 2, use bob's setAge method to change his age to 50.
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+// and down here we just use the method we already made
+bob.setAge = setAge;
+
+// change bob's age to 50 here
+bob.setAge(50);
+
+
+// "This" Works for Everyone
+/* Great! Now we can take advantage of the fact that the method setAge is not limited to a single object bob—we can reuse the same method for different objects!
+This allows us to avoid typing out a custom method each time. All because we used the placeholder this.
+
+In the editor, we have the same code as last time, where we define setAge using this. We then set bob.setAge = setAge;.
+But this time we will reuse the setAge method for susan as well. */
+
+// Instructions
+/* Make susan on lines 11-13, who should initially have an age of 25 and a susan.setAge method also equal to setAge.
+
+Then use susan.setAge(35); to set susan's age to 35. */
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+bob.setAge = setAge;
+
+// make susan here, and first give her an age of 25
+var susan = new Object();
+susan.age = 25;
+susan.setAge = setAge;
+
+// here, update Susan's age to 35 using the method
+susan.setAge(35);
+
+
+// Make Your Own Method
+/* Let's look at a new example and get practice writing methods.
+
+Here we have defined an object rectangle starting on line 1.
+It has a two properties, height and width, which represents the height and width of the shape.
+
+We have written a setHeight method which will update rectangle's height to the given parameter.
+This is very similar to setAge from our person example.
+
+Note we have used the keyword this. this is still a placeholder, but in this scenario, this can
+only ever refer to rectangle because we defined setHeight to be explicitly part of rectangle by defining it as rectangle.setHeight. */
+
+// Instructions
+/* Finish the method setWidth. It should take a parameter newWidth. It will change the property width to the given parameter.
+
+Then use the two methods setHeight and setWidth to change rectangle's height to 6 and width to 8. */
+
+var rectangle = new Object();
+rectangle.height = 3;
+rectangle.width = 4;
+// here is our method to set the height
+rectangle.setHeight = function (newHeight) {
+  this.height = newHeight;
+};
+// help by finishing this method
+rectangle.setWidth = function (newWidth) {
+  this.width = newWidth;
+};
+
+// here change the width to 8 and height to 6 using our new methods
+rectangle.setWidth(8);
+rectangle.setHeight(6);
+
+
+// More Kinds of Methods
+/* Let's look at another method that calculates useful information about an object.
+
+Here we have an object square with a sideLength property to represent the length of the square's side.
+This time, we have added a new method, calcPerimeter, which computes the perimeter of the square.
+Notice we make use of the keyword return (in the same way we use it in functions!). */
+
+// Instructions
+// Add another method called calcArea, which returns the area of square in terms of sideLength. Use the calcPerimeter function as a guide.
+
+var square = new Object();
+square.sideLength = 6;
+
+square.calcPerimeter = function() {
+return this.sideLength * 4;
+};
+
+// help us define an area method here
+square.calcArea = function(){
+return this.sideLength * this.sideLength;
+}
+
+var p = square.calcPerimeter();
+var a = square.calcArea();
+
+/* I messed up on this because when I was defining my function, I used var calcArea instead of square.calcArea... so when I ran it, it bombed out. Gotta be careful with things like that. */
+
+
+// The Object Constructor
+/* We mentioned the term constructor back in section one, when we talked about making an object using the keyword new. A constructor is a way to create an object.
+
+When we write bob = new Object( ); we are using a built-in constructor called Object. This constructor is already defined by the JavaScript language and just makes an object with no properties or methods.
+
+This means we have to add our properties one at a time, just like we've been doing. To review, we've created bob using the constructor and defined the name property for you. */
+
+// Instructions
+// Finish making bob by defining the age property and setting it equal to 20
+
+// here we make bob using the Object constructor
+var bob = new Object();
+bob.name = "Bob Smith";
+// add bob's age here and set it equal to 20
+bob.age = 20;
